@@ -26,4 +26,4 @@ client.on('messageCreate', message => {
 });
 
 
-client.login(TOKEN).then(() => console.log("${client.user.username} se ah conectado."));
+client.login(process.TOKEN).then(() => console.log("${client.user.username} se ah conectado."));
