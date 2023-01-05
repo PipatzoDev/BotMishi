@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
     intents: ['DirectMessages','DirectMessageTyping','DirectMessageReactions','Guilds','AutoModerationConfiguration','AutoModerationExecution','GuildBans','GuildEmojisAndStickers','GuildIntegrations','GuildInvites','GuildMembers','GuildMessageReactions','GuildMessageTyping','GuildMessages','GuildPresences','GuildScheduledEvents','GuildVoiceStates','GuildWebhooks','MessageContent']
 });
-const CONFIG = require('./config.json');
+
 
 /*
 client.on('ready', () => {
@@ -26,4 +26,4 @@ client.on('messageCreate', message => {
 });
 
 
-client.login(CONFIG.token).then(() => console.log("${client.user.username} se ah conectado."));
+client.login(token).then(() => console.log("${client.user.username} se ah conectado."));
