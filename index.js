@@ -29,4 +29,4 @@ client.on('messageCreate', message => {
 });
 
 
-client.login('MTA2MDM0NTc2NzI1NDA0MDY3OA.GQZBXB.oCsfif9zRIQ7r-2_RlxWfqUKgCnRcIjUb7i77c').then(() => console.log("${client.user.username} se ah conectado."+ config.ClientID));
+client.login(TOKEN).then(() => console.log("${client.user.username} se ah conectado."+ config.ClientID));
