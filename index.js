@@ -1,5 +1,6 @@
 const { ContextMenuCommandAssertions } = require('discord.js');
 const Discord = require('discord.js');
+const config = require('./config.json');
 const client = new Discord.Client({
     intents: ['DirectMessages','DirectMessageTyping','DirectMessageReactions','Guilds','AutoModerationConfiguration','AutoModerationExecution','GuildBans','GuildEmojisAndStickers','GuildIntegrations','GuildInvites','GuildMembers','GuildMessageReactions','GuildMessageTyping','GuildMessages','GuildPresences','GuildScheduledEvents','GuildVoiceStates','GuildWebhooks','MessageContent']
 });
@@ -16,7 +17,9 @@ client.on('messageCreate', message => {
         message.reply('Maracalen es una peyia y se la come al '+ message.author.username );
         message.channel.send({
             files:["https://cdn.discordapp.com/attachments/828493167530999818/1060417439415939072/bruuut.png"]
-        })
+        });
+        client.channels.cache.get('930906516255568005').send('Macalen weno pal pene del pipa.')
+
         
     }
     if(message.content.includes('poto'))
@@ -26,4 +29,4 @@ client.on('messageCreate', message => {
 });
 
 
-client.login(process.env.TOKEN).then(() => console.log("${client.user.username} se ah conectado."));
+client.login('MTA2MDM0NTc2NzI1NDA0MDY3OA.GQZBXB.oCsfif9zRIQ7r-2_RlxWfqUKgCnRcIjUb7i77c').then(() => console.log("${client.user.username} se ah conectado."+ config.ClientID));
